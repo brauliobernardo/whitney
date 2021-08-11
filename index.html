@@ -200,7 +200,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
 
-var countDownDate = new Date("Sep 27, 2020 00:23:00").getTime();
+let currentYear = new Date().getFullYear();
+var countDownDate = new Date("Sep 27, " + currentYear + " 00:23:00").getTime();
 
 var x = setInterval(function() {
 

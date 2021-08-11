@@ -211,7 +211,7 @@
         </section>
 
         <section id='fwSection' class='d-none'>
-            <h1 class='display-1 font-weight-bold text-center my-5 bigText'>23</h1>
+            <h1 id='ageHeading' class='display-1 font-weight-bold text-center my-5 bigText'>23</h1>
             <div class="pyro">
                 <div class="before"></div>
                 <div class="after"></div>
@@ -221,8 +221,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script>
-        let currentYear = new Date().getFullYear();
-        var countDownDate = new Date("Sep 27, " + currentYear + " 00:23:00").getTime();
+        let currentYear = '2020' || new Date().getFullYear();
+        let dateOfBirth = new Date("Sep 27, 1997 00:23:00");
+        let latestDateOfBirth = new Date("Sep 27, " + currentYear + " 00:00:00");
+        var countDownDate = latestDateOfBirth.getTime();
+        let age = currentYear - dateOfBirth.getFullYear();
+
+        document.querySelector('#ageHeading').innerText = age;
 
         var x = setInterval(function () {
 

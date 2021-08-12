@@ -236,7 +236,7 @@
 
         document.querySelector('#ageHeading').innerText = age;
 
-        var x = setInterval(function () {
+        var counterInterval = setInterval(function () {
 
             var now = new Date().getTime();
 
@@ -255,7 +255,7 @@
             document.querySelector('#cdSection').classList.remove('d-none');
 
             if (distance < 0) {
-                clearInterval(x);
+                clearInterval(counterInterval);
                 showBirthdaySection();
             }
         }, 1000);
